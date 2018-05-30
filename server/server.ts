@@ -1,7 +1,8 @@
 import * as express from 'express';
 import test from './test';
-console.log(test)
+
+console.log(test);
 const app = express();
-app.get('/', (request, response) => response.send('这里是首页'));
-app.get('/stock', (request, response) => response.send('这里是股票'));
+app.get('/articles', (request, response) => response.send('文章列表'));
+app.post('/articles', (request, response) => response.send('新增文章'));
 app.listen(8080);
