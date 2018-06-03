@@ -1,6 +1,6 @@
-import * as express from 'express';
-
-
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express = require("express");
 const app = express();
 app.get('/articles', (request, response) => response.send('文章列表'));
 app.post('/articles', (request, response) => response.send('新增文章'));

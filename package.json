@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "tsc && node build/server"
+    "start": "ts-node server/server",
+    "ts-node": "ts-node"
   },
   "repository": {
     "type": "git",
@@ -18,11 +19,15 @@
   },
   "homepage": "https://github.com/fenghengzhi/blog_server#readme",
   "dependencies": {
-    "@types/express": "^4.11.0",
-    "@types/node": "^9.4.0",
-    "express": "^4.16.2"
+    "express": "^4.16.3",
+    "mysql2": "^1.5.3",
+    "sequelize": "^4.37.10"
   },
   "devDependencies": {
-    "typescript": "^2.6.2"
+    "@types/express": "^4.11.1",
+    "@types/node": "^10.1.4",
+    "@types/sequelize": "^4.27.20",
+    "ts-node": "^6.0.5",
+    "typescript": "^2.8.3"
   }
 }
