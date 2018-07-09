@@ -1,0 +1,5 @@
+{
+  "rootPassword": "asdfasdafds",
+  "port": "3306",
+  "name": "blog"
+}
