@@ -7,30 +7,34 @@ interface ArticleAttributes {
   content: string;
   readNum?: number;
   deleted?: boolean;
+  createdAt?: string;
+  updatedAt?: string;
 }
 
 type ArticleInstance = Sequelize.Instance<ArticleAttributes> & ArticleAttributes;
 
 const Article = db.define<ArticleInstance, ArticleAttributes>('article', {
-  id     : { //自增长id,主键,整形
+  id       : { //自增长id,主键,整形
     type         : Sequelize.INTEGER,
     primaryKey   : true,
     autoIncrement: true,
   },
-  title  : {
+  title    : {
     type: Sequelize.STRING,
   },
-  content: {
+  content  : {
     type: Sequelize.TEXT,
   },
-  readNum: {
+  readNum  : {
     type        : Sequelize.BIGINT,
     defaultValue: 0,
   },
-  deleted: {
+  deleted  : {
     type        : Sequelize.BOOLEAN,
     defaultValue: false,
   },
+  createdAt: {type: Sequelize.TIME},
+  updatedAt: {type: Sequelize.TIME},
 });
 
 

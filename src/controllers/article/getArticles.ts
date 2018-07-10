@@ -6,8 +6,8 @@ export default async function getArticles(request: Request, response: Response, 
   const articles = await Article.findAll({where: {deleted: false}});
   const result = articles.map(item => ({
     title  : item.get('title'),
-    content: item.get('content'),
-    readNum: item.get('readNum'),
+    // content: item.get('content'),
+    // readNum: item.get('readNum'),
     id     : item.get('id'),
   }));
   response.send(result);

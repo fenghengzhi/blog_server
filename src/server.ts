@@ -8,6 +8,7 @@ import articleController from './controllers/article';
 
 const app = express();
 // app.use('/', proxyMiddleWare(proxyOption));
+// app.use(express.static('public'));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -18,4 +19,4 @@ app.post('/api/articles', articleController.postArticle);
 app.put('/api/articles/:id', articleController.putArticle);
 app.delete('/api/articles/:id', articleController.deleteArticle);
 
-app.listen(8080);
+app.listen(8887);

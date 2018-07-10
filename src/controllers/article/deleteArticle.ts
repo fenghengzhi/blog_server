@@ -7,7 +7,7 @@ import token from './token';
 export default async function deleteArticle(request: Request, response: Response, next: NextFunction) {
   const requestToken = request.get('token');
   if (requestToken !== token) {
-    response.send('authentication failure');
+    response.status(401).send('authentication failure');
     return;
   }
   const id = request.params.id;
@@ -20,6 +20,6 @@ export default async function deleteArticle(request: Request, response: Response
       response.status(404).send('not found');
     }
   } else {
-    response.send('params error');
+    response.status(400).send('params error');
   }
 }
