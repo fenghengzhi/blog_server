@@ -33,8 +33,6 @@ const Article = db.define<ArticleInstance, ArticleAttributes>('article', {
     type        : Sequelize.BOOLEAN,
     defaultValue: false,
   },
-  createdAt: {type: Sequelize.TIME},
-  updatedAt: {type: Sequelize.TIME},
 });
 
 
