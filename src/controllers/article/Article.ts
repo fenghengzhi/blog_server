@@ -33,7 +33,7 @@ const Article = db.define<ArticleInstance, ArticleAttributes>('article', {
         type: Sequelize.BOOLEAN,
         defaultValue: false,
     },
-}, {charset: 'utf8'});
+}, {charset: 'utf8mb4'});
 
 
 // force: true will drop the table if it already exists
