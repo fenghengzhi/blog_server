@@ -9,7 +9,7 @@ import articleController from './controllers/article';
 const app = express();
 // app.use('/', proxyMiddleWare(proxyOption));
 // app.use(express.static('public'));
-
+articleController.initArticle();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 // app.get('/articles', articleController.getArticle);
